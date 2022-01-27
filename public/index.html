@@ -18,10 +18,14 @@
       async function getISS() {
            const response = await fetch(url);
            const data = await response.json();
-           const {name, location} = data;
+           const {name, location, public_repos, followers, following, twitter_username} = data;
 
               document.getElementById('name').textContent = name;
-             document.getElementById('loc').textContent = location;
+              document.getElementById('loc').textContent = location;
+              document.getElementById('public_repo').textContent = public_repos;
+              document.getElementById('follower').textContent = followers;
+              document.getElementById('following').textContent = following;
+              document.getElementById('twitter_username').textContent = twitter_username;
              
         }
         getISS();
@@ -47,9 +51,18 @@
   </body>
   <center><img src="https://activity-graph.herokuapp.com/graph?username=shweta200126&theme=dracula&bg_color=00000000&color=878787&line=2f80ed&point=808080&area=true&hide_border=true" height=400>
 <hr>
-      <p> 
+      <p>
+        Use of GitHub Api: 
         Name is <span id="name"></span> 
         <br/><br/>
-        Location is <span id="loc"></span> 
+        Location is <span id="loc"></span>
+        <p> 
+        Public Repositiories are <span id="name"></span> 
+        <br/><br/>
+        Followers are <span id="loc"></span> 
+        <p>
+        Following <span id="name"></span> 
+        <br/><br/>
+        Twitter username is <span id="loc"></span> 
     </p>     
 </html>
