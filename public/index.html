@@ -20,8 +20,8 @@
            const data = await response.json();
            const {name, location} = data;
 
-              document.getElementById('low').textContent = yearLow.toFixed(2);
-             document.getElementById('high').textContent = yearHigh.toFixed(2);
+              document.getElementById('name').textContent = name;
+             document.getElementById('loc').textContent = location;
              
         }
         getISS();
@@ -48,8 +48,8 @@
   <center><img src="https://activity-graph.herokuapp.com/graph?username=shweta200126&theme=dracula&bg_color=00000000&color=878787&line=2f80ed&point=808080&area=true&hide_border=true">
 <hr>
       <p> 
-        Name is <span id="low"></span> 
+        Name is <span id="name"></span> 
         <br/><br/>
-        Location is <span id="high"></span> 
+        Location is <span id="loc"></span> 
     </p>     
 </html>
