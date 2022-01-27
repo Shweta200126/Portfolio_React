@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>React Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000">
@@ -12,7 +13,18 @@
     <link rel="stylesheet" href="%PUBLIC_URL%/css/magnific-popup.css">
 
 
-    <title>React Portfolio</title>
+    <script>
+      var url = "https://api.github.com/users/shweta200126";
+      async function getISS() {
+           const response = await fetch(url);
+           const data = await response.json();
+           const {name, location} = data;
+
+              document.getElementById('low').textContent = yearLow.toFixed(2);
+             document.getElementById('high').textContent = yearHigh.toFixed(2);
+             
+        }
+    </script>
   </head>
 
   <body>
@@ -33,5 +45,10 @@
 
   </body>
   <center><img src="https://activity-graph.herokuapp.com/graph?username=shweta200126&theme=dracula&bg_color=00000000&color=878787&line=2f80ed&point=808080&area=true&hide_border=true">
-
+<hr>
+      <p> 
+        Name is <span id="low"></span> 
+        <br/><br/>
+        Location is <span id="high"></span> 
+    </p>     
 </html>
